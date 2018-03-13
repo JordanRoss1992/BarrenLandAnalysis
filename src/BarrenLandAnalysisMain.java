@@ -12,7 +12,7 @@ public class BarrenLandAnalysisMain {
 		myField.zeroMatrix();
 		
 		// Gather and parse user input
-		System.out.println("Enter in a set: ");
+		System.out.println("Enter in a set, or enter 'q' ot exit: ");
 		// Gather input until we've received valid input.
 		while(!gatherInput());
 	
@@ -35,7 +35,6 @@ public class BarrenLandAnalysisMain {
 		}
 		String[] parts = s.split(",");
 	    for(int i = 0; i < parts.length; i++){
-	    	System.out.println(parts[i]);
 	    	String[] numbers = parts[i].replaceAll("[^0-9]+", " ").trim().split(" ");
 	    	if(numbers.length == 4){
 	    		myField.setBarren(new Point(Integer.parseInt(numbers[0]),  Integer.parseInt(numbers[1])), 
